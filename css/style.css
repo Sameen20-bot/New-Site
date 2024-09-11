@@ -1,0 +1,225 @@
+:root {
+  --primary-color: #c72727;
+  --secondary-color: #f99500;
+  --light-color: #f3f3f3;
+  --dark-color: #333;
+  --max-width: 1100px;
+}
+
+.category {
+  --sports-color: #f99500;
+  --ent-color: #a66bbe;
+  --tech-color: #009cff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1.5;
+  background: var(--light-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Staatliches", cursive;
+  line-height: 1.3;
+}
+
+/* navbar */
+
+.head {
+  width: 100%;
+}
+
+.navy {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 5fr 3fr 2fr;
+  padding: 20px 200px;
+  align-items: center;
+}
+
+.logo {
+  width: 200px;
+}
+
+.uls {
+  justify-self: flex-end;
+  display: flex;
+}
+
+ul li a {
+  padding: 20px;
+  font-weight: bold;
+}
+
+ul li a.current {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+ul li a:hover {
+  background-color: #333;
+  color: white;
+}
+
+.fab {
+  margin-left: 10px;
+}
+/* .lis{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+} */
+
+/* showcase */
+.showcase {
+  background-color: #333;
+  color: white;
+  position: relative;
+  padding: 50px 250px;
+}
+
+.showcase::before {
+  content: "";
+  background: url(../image_resources/featured.jpg) no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+.showcase-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.showcase-content {
+  z-index: 2;
+}
+
+.showcase-content p {
+  margin-bottom: 20px;
+}
+
+.category-sports{
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 30px;
+  padding: 2px 10px;
+  margin-bottom: 5px;
+}
+
+.category-ent{
+  display: inline-block;
+  background-color: var(--ent-color);
+  color: white;
+  border-radius: 30px;
+  padding: 2px 10px;
+  margin-bottom: 5px;
+}
+
+.category-tech{
+  display: inline-block;
+  background-color: var(--tech-color);
+  color: white;
+  border-radius: 30px;
+  padding: 2px 10px;
+  margin-bottom: 5px;
+}
+
+.btn-primary{
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.btn:hover{
+  opacity: 0.9;
+}
+
+/* cards */
+
+.card{
+  background-color: white;
+  padding: 1rem;
+}
+
+.articles-container1{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 16px;
+}
+
+.articles-container1 > *:first-child , .articles-container1 > *:last-child{
+   display: grid;
+   grid-template-columns: repeat(2 ,1fr);
+   gap: 1rem;
+   align-items: center;
+   grid-column: 1/ span 2;
+}
+
+.articles-container1 > *:last-child{
+  grid-column: 2/ span 2;
+}
+
+.bg-dark{
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.bg-primary{
+  background-color: var(--primary-color);
+  color: white;
+}
+
+#art-pad{
+  padding: 50px 170px;
+}
+
+.h3-card a{
+  color: white;
+}
+
+.articles-head{
+  margin-bottom: 10px;
+}
+
+/* footer */
